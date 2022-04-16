@@ -49,6 +49,7 @@ window.SaveSingleSongAsPDF = (filename, pdfJSON) => {
             //console.log("Command")
             doc.setFont("Inconsolata-LGC", pdf.Pages[pageIndex].TC[commandIndex].S);
             doc.setFontSize(pdf.Pages[pageIndex].TC[commandIndex].F);
+            doc.setTextColor(pdf.Pages[pageIndex].TC[commandIndex].C[0], pdf.Pages[pageIndex].TC[commandIndex].C[1], pdf.Pages[pageIndex].TC[commandIndex].C[2]);
             doc.text(pdf.Pages[pageIndex].TC[commandIndex].T, pdf.Pages[pageIndex].TC[commandIndex].X, pdf.Pages[pageIndex].TC[commandIndex].Y);
         }
     }
