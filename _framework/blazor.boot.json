@@ -1,5 +1,5 @@
 {
-  "cacheBootResources": false,
+  "cacheBootResources": true,
   "config": [ ],
   "debugBuild": false,
   "entryAssembly": "MusicUI",
@@ -25,7 +25,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-YColTWA58whC+8aBjv1O7HgsyYrbHTba601EkNDWAlo=",
       "Microsoft.JSInterop.dll": "sha256-dwGg77oBSbpnI5NiopwfX0OCig7aH+q44bSXrtcm0PU=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-vzwaIvFhA\/CHxhMcXKNUOu7C+zSrSm+hvDEmZhciN54=",
-      "MusicUI.dll": "sha256-uGGVdwXjHQACur7mQMkoyuqEdPNjRfFoUcPPMVbioeo=",
+      "MusicUI.dll": "sha256-gNodplpioHr57tXaHm0lNuSwu\/0GZd7c\/qpPkHYM6lU=",
       "Radzen.Blazor.dll": "sha256-4kl1nvm1fgyOqQaTPlpj5JW\/zte94lve4Zi5dTNfz2I=",
       "System.Collections.Concurrent.dll": "sha256-bRM7umlZVMDNpte\/ZOa+IfOssIi3ygBNp0cTvvBeOEU=",
       "System.Collections.dll": "sha256-vhq52L5Z1oCAweP7y+HOmMXxzTw94wbFZeyCyLwiTNU=",
@@ -70,9 +70,9 @@
     "libraryInitializers": null,
     "pdb": null,
     "runtime": {
-      "dotnet.6.0.4.w0us8b9rj4.js": "sha256-AtuzAB9B3GLs+R\/MBqRv065M9T0vjij0xpP2tJtrBKk=",
+      "dotnet.6.0.4.w0us8b9rj4.js": "sha256-MFH0IyIzlaBH8zstICeXozJW5JItWIKifH5BgYT\/xNs=",
       "dotnet.timezones.blat": "sha256-IAZQkATPLfknBs7WdmI3T1SiL6xDp4WjMEnYenpVpcE=",
-      "dotnet.wasm": "sha256-EbPCECUvfd7hGLz7zTdGHohlkF4cEEc4S8pzRjirmIM=",
+      "dotnet.wasm": "sha256-y+VmJX2h3LWS7DUxbXtySbbYdH2MQqF8ph4EI0Em96g=",
       "icudt_CJK.dat": "sha256-WPyI4hWDPnOw62Nr27FkzGjdbucZnQD+Ph+GOPhAedw=",
       "icudt_EFIGS.dat": "sha256-4RwaPx87Z4dvn77ie\/ro3\/QzyS+\/gGmO3Y\/0CSAXw4k=",
       "icudt_no_CJK.dat": "sha256-OxylFgLJlFqixsj+nLxYVsv5iZLvfIKMpLf9hrWaChA=",
