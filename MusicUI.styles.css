@@ -143,3 +143,13 @@ main[b-ftq7tcuod3] {
         display: block;
     }
 }
+/* /Shared/SongTable.razor.rz.scp.css */
+.pager-dropdown[b-ybm3qwf8eq] {
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    .pager-dropdown[b-ybm3qwf8eq] {
+        width: 75%;
+    }
+}
