@@ -44,6 +44,10 @@ window.SaveSingleSongAsPDF = (filename, pdfJSON) => {
             console.log("Addpage")
             doc.addPage(pdf.Pages[pageIndex].F, pdf.Pages[pageIndex].O);
         }
+        for (let commandIndex = 0; commandIndex < pdf.Pages[pageIndex].RC.length; commandIndex++) {
+            doc.setFillColor(pdf.Pages[pageIndex].RC[commandIndex].C[0], pdf.Pages[pageIndex].RC[commandIndex].C[1], pdf.Pages[pageIndex].RC[commandIndex].C[2]);
+            doc.rect(pdf.Pages[pageIndex].RC[commandIndex].X, pdf.Pages[pageIndex].RC[commandIndex].Y, pdf.Pages[pageIndex].RC[commandIndex].W, pdf.Pages[pageIndex].RC[commandIndex].H, pdf.Pages[pageIndex].RC[commandIndex].S);
+        }
         for (let commandIndex = 0; commandIndex < pdf.Pages[pageIndex].TC.length; commandIndex++) {
             //for each command
             //console.log("Command")
