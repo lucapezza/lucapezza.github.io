@@ -1,11 +1,11 @@
 {
   "entryAssembly": "MusicUI",
   "resources": {
-    "hash": "sha256-rWX9AQcH79dsrRx7aTvRcgh2Cl7V56DcHoEIl+FwnQE=",
+    "hash": "sha256-oGuWLRjGnf1RA97tVN7NL08bpuM7G6nTTFZ9vf+uxgc=",
     "runtime": {
-      "dotnet.6.0.28.g4kayl766a.js": "sha256-NO9jT87NwMSuM4RM7+81Qhn+ohw6tSH6F0G5c5gW9B4=",
+      "dotnet.6.0.28.g4kayl766a.js": "sha256-mfJaUBze2phxzDx035krkL3R2uwz7gGpuPy3Ea217ZY=",
       "dotnet.timezones.blat": "sha256-hKZ27N25m01CP4HR0RFvVj2dU0Cw2+EqatmI4zCXdHc=",
-      "dotnet.wasm": "sha256-qy8gnHSVHhlDfoMy+qtXu5+hovwoKsHg7/UJ1z3XRpE=",
+      "dotnet.wasm": "sha256-aqDiPdR68SbtatxlT3+PwYEdFZ67cYVnhKOZfHVjN9o=",
       "icudt_CJK.dat": "sha256-WPyI4hWDPnOw62Nr27FkzGjdbucZnQD+Ph+GOPhAedw=",
       "icudt_EFIGS.dat": "sha256-4RwaPx87Z4dvn77ie/ro3/QzyS+/gGmO3Y/0CSAXw4k=",
       "icudt_no_CJK.dat": "sha256-OxylFgLJlFqixsj+nLxYVsv5iZLvfIKMpLf9hrWaChA="
@@ -13,7 +13,7 @@
     "assembly": {
       "Blazored.LocalStorage.dll": "sha256-6RRoYeDP3d0xabXmcCMF66wXeJlXVPem28Trs8sQiis=",
       "Blazored.SessionStorage.dll": "sha256-XkZNIC6OGMeHZDbBGnhfc9yXdLIvGa8LlKDd4ZPWkS8=",
-      "Microsoft.AspNetCore.Components.dll": "sha256-leqM51hOPdF8FEUjnLbTCckWVX0R+ls3moFpDlF1g9M=",
+      "Microsoft.AspNetCore.Components.dll": "sha256-usrHB4OixQ/0Zen8FWoJjzVpP36+B2gMoJpqwQKMZpM=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-8Ihw9+KNBsamLgVkRMk3T5CjsBxUv7QdFuKOfHiBZZ0=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-0gsZDSpCEUcVHYHElipAw5e2voMb84pDtxIAizUNw3g=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-IPj7d9SLgjoPqLbIpbEY3SwJPGUWNpR3QZ91esmpxSM=",
@@ -29,7 +29,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-QRewYnpJ6vl8gGMXBS2gN++/sQ9hKcuv+rhy586Bbxs=",
       "Microsoft.JSInterop.dll": "sha256-He8eTyoX01sUSeWnSydvgQ8dHa1eyJs3Pfi5gLhaVjM=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-3gIKCJK5QHMY/rc3WRVaq0jUISHNiByqXrInb94KDC0=",
-      "MusicUI.dll": "sha256-Aqc1TfYPQkwHY9wVbI/OpK+/dg6WpqndVmdbxWXXBP0=",
+      "MusicUI.dll": "sha256-N0jhPx5Ei15Qn6QOZZwnkZ6gzA+8KQzd5t6FlFNVuLI=",
       "Radzen.Blazor.dll": "sha256-4kl1nvm1fgyOqQaTPlpj5JW/zte94lve4Zi5dTNfz2I=",
       "System.Collections.Concurrent.dll": "sha256-D6bt7j9PJi8fxFzmejXCRHDjZX6w2xiZzfIr1RUUAdc=",
       "System.Collections.dll": "sha256-1OFrQ64TbTzhPEsnr//Rup2c9CqkydrygQmREr+Cfmg=",
@@ -72,7 +72,7 @@
     },
     "runtimeAssets": {
       "dotnet.wasm": {
-        "hash": "sha256-qy8gnHSVHhlDfoMy+qtXu5+hovwoKsHg7/UJ1z3XRpE=",
+        "hash": "sha256-aqDiPdR68SbtatxlT3+PwYEdFZ67cYVnhKOZfHVjN9o=",
         "behavior": "dotnetwasm"
       }
     }
