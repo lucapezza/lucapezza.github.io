@@ -1,11 +1,11 @@
 {
   "entryAssembly": "MusicUI",
   "resources": {
-    "hash": "sha256-cXMiZkFaggGL/PUB1ErQWYoAdeKE8P6SMRJv/9w/7Cs=",
+    "hash": "sha256-+j9tHat088xbzDwOSMntk2HG6ojw2Mcm+xfzVDYcgKA=",
     "runtime": {
-      "dotnet.6.0.36.g4kayl766a.js": "sha256-XzemejfXZhE2Q+v6HaDOJ4Lsd9NmSn7NH5RuMv0zVpY=",
+      "dotnet.6.0.36.g4kayl766a.js": "sha256-i3EB9g/rDzo54xHpkj/DDpLkz4gKaS+BwCn+N48sG/Y=",
       "dotnet.timezones.blat": "sha256-vrFYQt55a4tGoDGoyRfjjGa1nSecx646RK78iTzPWCM=",
-      "dotnet.wasm": "sha256-tutJJNs+fp+kP7ZMSqVwzl28krqLILtrf0fqrf/UpsM=",
+      "dotnet.wasm": "sha256-qleaaYZRSRW6n3KUNbqemSE0xWU7BZi/PPBAi9siVqE=",
       "icudt_CJK.dat": "sha256-WPyI4hWDPnOw62Nr27FkzGjdbucZnQD+Ph+GOPhAedw=",
       "icudt_EFIGS.dat": "sha256-4RwaPx87Z4dvn77ie/ro3/QzyS+/gGmO3Y/0CSAXw4k=",
       "icudt_no_CJK.dat": "sha256-OxylFgLJlFqixsj+nLxYVsv5iZLvfIKMpLf9hrWaChA="
@@ -29,7 +29,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-QRewYnpJ6vl8gGMXBS2gN++/sQ9hKcuv+rhy586Bbxs=",
       "Microsoft.JSInterop.dll": "sha256-He8eTyoX01sUSeWnSydvgQ8dHa1eyJs3Pfi5gLhaVjM=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-3gIKCJK5QHMY/rc3WRVaq0jUISHNiByqXrInb94KDC0=",
-      "MusicUI.dll": "sha256-Aq4ePPTqtgJTiMXKcyJF+bDvjUnioVg60RML0QSPYDQ=",
+      "MusicUI.dll": "sha256-o3JBcNTavHBF6YLnnGfj+vR+RxFhbspjE3pG/y92l/E=",
       "Radzen.Blazor.dll": "sha256-4kl1nvm1fgyOqQaTPlpj5JW/zte94lve4Zi5dTNfz2I=",
       "System.Collections.Concurrent.dll": "sha256-sWltXA5nN+rCi3x0rCFO/ohdp5KaRuJcusJ19rJrZSM=",
       "System.Collections.dll": "sha256-q4dqSlYsJxSXB18aFUXhOkE6p2idWPA3wVruvzdJo80=",
@@ -72,7 +72,7 @@
     },
     "runtimeAssets": {
       "dotnet.wasm": {
-        "hash": "sha256-tutJJNs+fp+kP7ZMSqVwzl28krqLILtrf0fqrf/UpsM=",
+        "hash": "sha256-qleaaYZRSRW6n3KUNbqemSE0xWU7BZi/PPBAi9siVqE=",
         "behavior": "dotnetwasm"
       }
     }
