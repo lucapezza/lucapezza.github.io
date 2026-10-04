@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
+    <!-- .NET 6's Mono runtime requires unsafe-eval. See GOOGLE_SETUP.md for the runtime exception and host headers. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'sha256-v8v3RKRPmN4odZ1CWM5gw80QKPCCWMcpNeOmimNL2AA=' https://accounts.google.com/gsi/client https://apis.google.com https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js; script-src-attr 'none'; worker-src 'self'; connect-src 'self' https://www.googleapis.com https://accounts.google.com https://oauth2.googleapis.com ws://localhost:* wss://localhost:*; frame-src https://accounts.google.com/gsi/ https://docs.google.com https://apis.google.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: blob: https://*.googleusercontent.com; font-src 'self' data:; base-uri 'self'; object-src 'none'; form-action 'none'" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>MusicUI</title>
     <base href="/" />
@@ -28,14 +31,14 @@
     <div id="blazor-error-ui">
         An unhandled error has occurred.
         <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
+        <a class="dismiss">Ã°Å¸â€”â„¢</a>
     </div>
 
-    <script src="_framework/blazor.webassembly.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
     <script src="scripts/pdf_generator.js?Date().getTime()"></script>
     <script src="scripts/download_file.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
 </body>
 
 </html>

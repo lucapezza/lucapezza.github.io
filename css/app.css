@@ -18,6 +18,16 @@ a, .btn-link {
     border-color: #1861ac;
 }
 
+/* Home's full-library controls share the same disabled appearance. */
+.library-transfer.btn:disabled,
+.library-transfer.btn.disabled {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    box-shadow: none;
+    pointer-events: none;
+}
+
 .content {
     padding-top: 1.1rem;
 }
