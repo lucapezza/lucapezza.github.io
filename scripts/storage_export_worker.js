@@ -1,4 +1,6 @@
 export function prepareLibrary({header, songs, playlists}) {
+    // Preferences belong to this browser, never to a shared library file.
+    delete header.AppSettings;
     header.Songs = Object.create(null);
     header.Playlists = Object.create(null);
     function record(raw) {
