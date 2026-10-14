@@ -1,0 +1,97 @@
+/* /Shared/MainLayout.razor.rz.scp.css */
+/* Application chrome lives above the router so status updates retain editor drafts. */
+/* /Shared/NavMenu.razor.rz.scp.css */
+.navbar-toggler[b-yzb2bg61hr] {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.top-row[b-yzb2bg61hr] {
+    height: 3.5rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.navbar-brand[b-yzb2bg61hr] {
+    font-size: 1.1rem;
+}
+
+.oi[b-yzb2bg61hr] {
+    width: 2rem;
+    font-size: 1.1rem;
+    vertical-align: text-top;
+    top: -2px;
+}
+
+.nav-item[b-yzb2bg61hr] {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type[b-yzb2bg61hr] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-yzb2bg61hr] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-yzb2bg61hr]  a {
+        color: #d7d7d7;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+.nav-item[b-yzb2bg61hr]  a.active {
+    background-color: rgba(255,255,255,0.25);
+    color: white;
+}
+
+.nav-item[b-yzb2bg61hr]  a:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-yzb2bg61hr] {
+        display: none;
+    }
+
+    .collapse[b-yzb2bg61hr] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+}
+/* /Shared/OperationHost.razor.rz.scp.css */
+.application-wait[b-183udxkong] { position:fixed; inset:0; z-index:1100; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,.94); }
+/* /Shared/SongTable.razor.rz.scp.css */
+.pager-dropdown[b-ybm3qwf8eq] {
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    .pager-dropdown[b-ybm3qwf8eq] {
+        width: 75%;
+    }
+}
+
+td[data-column="Date Added"][b-ybm3qwf8eq], td[data-column="Date Modified"][b-ybm3qwf8eq] {
+    color: var(--app-muted);
+    font-size: 12px;
+    min-width: 105px;
+}
+/* /Shared/SyncRoute.razor.rz.scp.css */
+.library-loading[b-lqsl31xgd3] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding-block: 18px;
+    color: var(--app-muted);
+    font-size: 14px;
+}
+/* /Shared/WaitingNotice.razor.rz.scp.css */
+.waiting-notice[b-i1elh06754] { display:flex; align-items:center; justify-content:center; gap:.75rem; color:#573b76; white-space:normal; overflow-wrap:anywhere; }
+.waiting-protected[b-i1elh06754] { padding:1.5rem; min-height:7rem; }
+.waiting-compact[b-i1elh06754] { justify-content:flex-start; padding:.25rem 0; }

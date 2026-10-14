@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g transform="scale(2)">
+  <title id="title">MusicUI — 3B.2.b / Aligned flag</title>
+  <desc id="description">Three fanned purple song cards with a centred white musical note. The flag flows from the stem's exact top with a shared horizontal tangent; the stem meets the oval's rightmost point with a shared vertical tangent.</desc>
+  <rect x="62" y="43" width="140" height="167" rx="19" fill="#49479f" transform="rotate(-13 132 190)"/>
+  <rect x="62" y="43" width="140" height="167" rx="19" fill="#eeedfa" transform="rotate(-6 132 190)"/>
+  <rect x="62" y="43" width="140" height="167" rx="19" fill="#5957bd"/>
+  <g fill="#fff" transform="translate(132 126.5) scale(1.2) translate(-135.74951045314668 -143.97642220606747)">
+    <path d="M129.2855860273 97a6 6 0 0 1 12 0V174.016586334418A25 18 -20 1 1 122.104222519544 159.047155587865C127.5 159.047155587865 129.2855860273 159 129.2855860273 154Z"/>
+    <path d="M135.2855860273 91C149.2855860273 91 173 108 178 127c2 8 0 16-4 23 0-17-15-22-38-22Z"/>
+  </g>
+</g></svg>

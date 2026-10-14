@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- .NET 6's Mono runtime requires unsafe-eval. See GOOGLE_SETUP.md for the runtime exception and host headers. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'sha256-v8v3RKRPmN4odZ1CWM5gw80QKPCCWMcpNeOmimNL2AA=' https://accounts.google.com/gsi/client https://apis.google.com https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js; script-src-attr 'none'; worker-src 'self'; connect-src 'self' https://www.googleapis.com https://accounts.google.com https://oauth2.googleapis.com ws://localhost:* wss://localhost:*; frame-src https://accounts.google.com/gsi/ https://docs.google.com https://apis.google.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: blob: https://*.googleusercontent.com; font-src 'self' data:; base-uri 'self'; object-src 'none'; form-action 'none'" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MusicUI</title>
+    <base href="/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <!--link rel="stylesheet" href="_content/Radzen.Blazor/css/default-base.css"-->
+    <link rel="stylesheet" href="_content/Radzen.Blazor/css/default-base.css">
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="MusicUI.styles.css" rel="stylesheet" />
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="svg_favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="preload" as="image" href="images/logo_text_splash.svg">
+</head>
+
+<body>
+    <div id="app">
+        <main class="startup-splash" aria-label="MusicUI startup">
+            <div class="startup-splash-content">
+                <picture>
+                    <source media="(prefers-reduced-motion: reduce)" srcset="images/logo_text.svg">
+                    <img id="startup-logo" src="images/logo_text_splash.svg" width="415" height="144" alt="MusicUI">
+                </picture>
+                <p id="startup-status" class="startup-status startup-status-pending" role="status" aria-live="polite">
+                    <span class="startup-spinner" aria-hidden="true"></span>
+                    <span id="startup-message"></span>
+                </p>
+            </div>
+        </main>
+    </div>
+    <script src="scripts/startup_splash.js"></script>
+
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">Ã°Å¸â€”â„¢</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
+    <script src="scripts/pdf_generator.js?Date().getTime()"></script>
+    <script src="scripts/download_file.js"></script>
+    <script src="_framework/blazor.webassembly.js" autostart="false"></script>
+    <script src="scripts/startup_blazor.js"></script>
+</body>
+
+</html>
