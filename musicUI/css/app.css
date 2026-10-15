@@ -316,3 +316,10 @@ hr { border-color: var(--app-border); opacity: 1; margin-block: 20px; }
 
 /* Radzen 3.18 does not rerender its titlebar when DialogOptions changes. */
 html[data-musicui-protected] .rz-dialog-titlebar-close { display: none; }
+
+/* Drag feedback lives outside the Blazor component for viewport positioning. */
+.playlist-drag-source { opacity: .45; }
+.playlist-drag-preview, .playlist-drag-marker { position: fixed; pointer-events: none; z-index: 1100; }
+.playlist-drag-preview { background: white; opacity: .92; border: 1px solid var(--app-purple); border-radius: 8px; box-shadow: 0 8px 24px #252b3b33; max-height: 100px; overflow: hidden; }
+.playlist-drag-preview .table { margin: 0; white-space: nowrap; }
+.playlist-drag-marker { height: 4px; background: var(--app-purple); border-radius: 2px; }

@@ -1,3 +1,20 @@
+/* /Pages/ShowPlaylist.razor.rz.scp.css */
+.playlist-drag-handle[b-jxl6ovk9wx] {
+    touch-action: none;
+    cursor: grab;
+    min-width: 44px;
+    min-height: 44px;
+    user-select: none;
+}
+.playlist-drag-handle:active[b-jxl6ovk9wx] { cursor: grabbing; }
+.playlist-drop-end[b-jxl6ovk9wx] {
+    border: 1px dashed var(--app-border);
+    border-radius: 7px;
+    padding: 12px;
+    min-height: 44px;
+    color: var(--app-muted);
+    margin: -8px 0 12px;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 /* Application chrome lives above the router so status updates retain editor drafts. */
 /* /Shared/NavMenu.razor.rz.scp.css */
