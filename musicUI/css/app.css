@@ -296,6 +296,7 @@ hr { border-color: var(--app-border); opacity: 1; margin-block: 20px; }
     .app-heading h1 { font-size: 25px; }
     .app-heading > .app-actions { margin-left: auto; }
     .musicui-app .btn { min-height: 44px; }
+    .musicui-app .btn:where(:not(table .btn)) { min-height: 36px; padding: 6px 10px; font-size: 12px; }
     .google-account .btn { font-size: 12px; padding-inline: 10px; }
     .sync-action { min-height: 36px; }
     .sync-actions { margin-left: auto; }

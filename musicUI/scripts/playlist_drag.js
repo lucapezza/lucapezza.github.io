@@ -80,26 +80,47 @@ export function initialize(root, dotnet) {
         marker.setAttribute('aria-hidden', 'true');
         s.preview = preview; s.marker = marker;
         (root.closest('.musicui-app') || document.body).append(preview, marker);
-        tick();
+        s.lastFrame = performance.now();
+        tick(s.lastFrame);
     }
 
-    const speed = (position, min, max) => position < min + 48
-        ? -Math.ceil(14 * Math.max(0, 1 - (position - min) / 48))
-        : position > max - 48 ? Math.ceil(14 * Math.max(0, 1 - (max - position) / 48)) : 0;
+    // Pixels per second, with a useful minimum as soon as an edge zone is entered.
+    // Clamp beyond-edge positions so captured pointers keep scrolling at full speed.
+    function speed(position, min, max, zone, maximum) {
+        const before = position < min + zone;
+        const after = position > max - zone;
+        if (!before && !after) return 0;
+        const distance = before ? position - min : max - position;
+        const intensity = Math.max(0, Math.min(1, 1 - distance / zone));
+        return (before ? -1 : 1) * (180 + (maximum - 180) * intensity);
+    }
 
-    function tick() {
+    function tick(timestamp) {
         const s = gesture;
         if (!s?.active) return;
         if (!usable(s)) { void cancel(); return; }
+        const seconds = Math.min(60, Math.max(0, timestamp - s.lastFrame)) / 1000;
+        s.lastFrame = timestamp;
+        const viewport = window.visualViewport;
+        const left = viewport?.offsetLeft ?? 0, top = viewport?.offsetTop ?? 0;
+        const right = left + (viewport?.width ?? innerWidth);
+        const bottom = top + (viewport?.height ?? innerHeight);
         Object.assign(s.preview.style, { left: `${Math.max(8, Math.min(s.x + 14, innerWidth - 100))}px`,
             top: `${s.y + 14}px` });
-        if (s.x >= 0 && s.x <= innerWidth && s.y >= 0 && s.y <= innerHeight) {
-            window.scrollBy(0, speed(s.y, 0, innerHeight));
-            const hit = document.elementFromPoint(s.x, s.y);
+        if (s.x >= left - 32 && s.x <= right + 32) {
+            const zone = Math.min(160, Math.max(80, (bottom - top) * .18));
+            const dy = speed(s.y, top, bottom, zone, 1800) * seconds;
+            // Bootstrap sets scroll-behavior:smooth. Repeated smooth scroll requests
+            // restart that animation every frame, making touch dragging very slow.
+            if (dy) window.scrollBy({ left: 0, top: dy, behavior: 'instant' });
+            const hit = document.elementFromPoint(Math.max(left, Math.min(right - 1, s.x)),
+                Math.max(top, Math.min(bottom - 1, s.y)));
             const table = hit?.closest('.table-scroll');
             if (table && root.contains(table)) {
                 const bounds = table.getBoundingClientRect();
-                table.scrollLeft += speed(s.x, bounds.left, bounds.right);
+                const min = Math.max(left, bounds.left), max = Math.min(right, bounds.right);
+                const dx = speed(s.x, min, max, Math.min(64, (max - min) / 3), 1000) * seconds;
+                if (dx) table.scrollBy({ left: dx, top: 0, behavior: 'instant' });
             }
         }
         locate(s);
