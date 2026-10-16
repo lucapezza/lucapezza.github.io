@@ -212,7 +212,6 @@ hr { border-color: var(--app-border); opacity: 1; margin-block: 20px; }
 .musicui-app label.header-menu-item { color: var(--app-text); font: inherit; }
 .header-menu-item:hover, .header-menu-item:focus-within { background: var(--app-tint); }
 .header-menu-item:disabled, .header-menu-item.disabled { opacity: .5; cursor: default; }
-.header-account-name { padding: 10px 12px; color: var(--app-muted); font-size: 12px; overflow-wrap: anywhere; border-bottom: 1px solid var(--app-border); margin-bottom: 4px; }
 .header-logout { border-top: 1px solid var(--app-border); margin-top: 4px; border-radius: 0 0 5px 5px; }
 .about-content { display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; padding-bottom: 24px; }
 .about-content img { width: 240px; max-width: 100%; height: auto; }
