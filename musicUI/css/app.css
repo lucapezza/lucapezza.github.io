@@ -143,6 +143,7 @@ body { margin: 0; font-size: 14px; line-height: 1.5; }
 .app-content > div, .app-content .row > *, .app-form > *, .table-filters > * { min-width: 0; }
 .app-content .container-fluid { padding-inline: 0; }
 .app-content h1 { font-size: 29px; line-height: 1.2; font-weight: 600; letter-spacing: -.7px; margin: 0; overflow-wrap: anywhere; }
+.app-content h1.app-page-title { font-size: 32px; color: var(--app-purple); }
 .app-content h2 { font-size: 18px; font-weight: 600; }
 .app-content h3 { font-size: 17px; font-weight: 600; }
 .app-heading { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 22px; }
@@ -221,6 +222,8 @@ hr { border-color: var(--app-border); opacity: 1; margin-block: 20px; }
 .table-search-field { display: flex; flex-direction: column; gap: 6px; }
 .table-search-options { padding-top: 10px; }
 .table-options { display: flex; gap: 16px; align-items: flex-start; }
+.musicui-app .table-search-field .rz-textbox { font-family: inherit; color: #000; }
+.musicui-app .table-search-field .rz-textbox::placeholder { font-family: inherit; font-style: normal; font-weight: normal; color: var(--app-muted); opacity: 1; }
 .table-option { display: flex; flex-direction: column; gap: 6px; min-width: 120px; }
 .table-option:first-child { width: 260px; }
 .table-option .rz-dropdown { width: 100%; }
@@ -250,6 +253,7 @@ hr { border-color: var(--app-border); opacity: 1; margin-block: 20px; }
 .set-heading h2 { margin-bottom: 0; }
 .app-footer { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; color: var(--app-muted); font-size: 12px; padding-top: 24px; margin-top: 30px; border-top: 1px solid var(--app-border); text-align: center; }
 .app-footer img { flex-shrink: 0; }
+.app-footer .app-version { flex-basis: 100%; }
 .app-footer span { max-width: 100%; white-space: normal; }
 .maintenance-fields { display: flex; gap: 18px; flex-wrap: wrap; max-width: 620px; }
 .maintenance-fields > div { flex: 1 1 200px; }
@@ -267,6 +271,8 @@ hr { border-color: var(--app-border); opacity: 1; margin-block: 20px; }
 .rz-dialog-content .flex-column { gap: 8px; }
 .rz-dropdown-panel, .rz-multiselect-panel { max-width: calc(100vw - 32px); border: 1px solid var(--app-border); border-radius: 7px; }
 .rz-multiselect-panel { overflow: hidden; }
+/* Radzen 3.18 always renders select-all; column pickers only offer individual columns. */
+.rz-multiselect-panel[id^="popup-song-table-"][id$="-columns"] > .rz-multiselect-header { display: none; }
 .rz-multiselect-panel .rz-chkbox-box { border-radius: 4px; }
 .rz-dropdown-items li:hover,
 .rz-dropdown-items li:focus,
@@ -289,11 +295,12 @@ hr { border-color: var(--app-border); opacity: 1; margin-block: 20px; }
     .app-content { padding-top: 24px; }
     .app-navigation { gap: 14px; padding-block: 14px; }
     .app-brand img { height: 40px; }
-    .app-nav-links { order: 3; flex-basis: 100%; }
+    .app-nav-links { order: 3; flex-basis: 100%; justify-content: center; }
     .app-nav-links a { padding: 8px 12px; }
     .google-account { gap: 8px; }
     .account-name { display: none; }
     .app-heading h1 { font-size: 25px; }
+    .app-content h1.app-page-title { font-size: 28px; }
     .app-heading > .app-actions { margin-left: auto; }
     .musicui-app .btn { min-height: 44px; }
     .musicui-app .btn:where(:not(table .btn)) { min-height: 36px; padding: 6px 10px; font-size: 12px; }
@@ -303,8 +310,8 @@ hr { border-color: var(--app-border); opacity: 1; margin-block: 20px; }
     .app-form { grid-template-columns: minmax(0, 1fr); }
     .app-form > * { grid-column: 1 !important; }
     .table-search { flex: 1 1 100%; min-width: 0; }
-    .table-options { width: 100%; gap: 12px; }
-    .table-option:first-child { width: auto; flex: 1; min-width: 0; }
+    .table-options { width: 100%; gap: 12px; flex-direction: column; }
+    .table-options > .table-option { width: 100%; min-width: 0; }
     .musicui-app .form-control, .musicui-app .form-select, .musicui-app .rz-textbox, .musicui-app .rz-dropdown { font-size: 16px; }
     .table-scroll .table { min-width: 530px; }
     .lyrics-panel { padding: 24px 18px; }

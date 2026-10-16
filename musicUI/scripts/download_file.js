@@ -1,23 +1,22 @@
 ﻿window.blazorDownloadFile = (filename, contentType, content) => {
-    console.log(content);
-    // Blazor marshall byte[] to a base64 string, so we first need to convert the string (content) to a Uint8Array to create the File
-    //const data = base64DecToArr(content);
-    const data = content;
-    // Create the URL
-    const file = new File([data], filename, { type: contentType });
+    // Blazor supplies byte[] as a Uint8Array; keep the exported bytes unchanged.
+    const file = new File([content], filename, { type: contentType });
     const exportUrl = URL.createObjectURL(file);
 
     // Create the <a> element and click on it
     const a = document.createElement("a");
+    a.hidden = true;
     document.body.appendChild(a);
     a.href = exportUrl;
     a.download = filename;
     a.target = "_self";
-    a.click();
-
-    // We don't need to keep the url, let's release the memory
-    // On Safari it seems you need to comment this line... (please let me know if you know why)
-    URL.revokeObjectURL(exportUrl);
+    try {
+        a.click();
+    } finally {
+        a.remove();
+        // Give mobile browsers time to consume the blob before releasing it.
+        setTimeout(() => URL.revokeObjectURL(exportUrl), 60_000);
+    }
 }
 
 // Convert a base64 string to a Uint8Array. This is needed to create a blob object from the base64 string.
