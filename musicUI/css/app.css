@@ -151,7 +151,9 @@ body { margin: 0; font-size: 14px; line-height: 1.5; }
 .app-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
 .app-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding: 14px 0; margin-bottom: 24px; border-block: 1px solid var(--app-border); }
 .library-actions { justify-content: flex-end; min-width: 0; }
-.song-actions { justify-content: flex-end; padding-bottom: 20px; border-bottom: 1px solid var(--app-border); margin-bottom: 24px; }
+.song-actions { justify-content: flex-end; }
+.home-heading { padding-bottom: 20px; border-bottom: 1px solid var(--app-border); }
+.home-heading h1 { flex-basis: auto; }
 .library-actions > .text-muted { margin-right: 4px; font-size: 12px; }
 .playlist-index-heading { padding-bottom: 20px; border-bottom: 1px solid var(--app-border); margin-bottom: 24px; }
 .playlist-toolbar { border-top: 0; }
@@ -190,6 +192,37 @@ hr { border-color: var(--app-border); opacity: 1; margin-block: 20px; }
 .sync-action:disabled { opacity: .5; cursor: default; }
 .sync-facts { display: grid; grid-template-columns: auto 1fr; gap: 8px 20px; }
 .sync-facts dd { margin: 0; overflow-wrap: anywhere; }
+
+.header-actions { display: flex; align-items: center; justify-content: flex-end; gap: 10px; margin-left: auto; flex: 1 1 280px; min-width: 0; }
+.header-transfer-error { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex: 1 1 100%; margin: 0; }
+.header-transfer-error .header-menu-item { width: auto; flex-shrink: 0; }
+.header-sync { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; min-width: 0; font-size: 12px; text-align: right; overflow-wrap: anywhere; }
+.header-sync-detail { color: var(--app-muted); max-width: 340px; }
+.header-sync-file { color: var(--app-purple); max-width: 280px; overflow-wrap: anywhere; }
+.header-sync-warning { color: var(--app-danger); }
+.header-dropdown { position: relative; flex-shrink: 0; }
+.header-icon { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; cursor: pointer; list-style: none; }
+.header-icon::-webkit-details-marker { display: none; }
+.header-icon:hover, .header-dropdown[open] > summary { background: var(--app-tint); }
+.header-icon:focus-visible { outline: 3px solid #a7a2e5; outline-offset: 3px; }
+.signed-out-icon { color: #777; font-size: 23px; }
+.header-more { font-size: 28px; line-height: 1; }
+.header-dropdown-content { position: absolute; z-index: 100; top: calc(100% + 8px); right: 0; width: 230px; max-width: calc(100vw - 32px); padding: 6px; background: var(--app-surface); border: 1px solid var(--app-border); border-radius: 8px; box-shadow: 0 8px 24px #252b3b26; }
+.header-menu-item { display: block; position: relative; width: 100%; margin: 0; padding: 10px 12px; border: 0; border-radius: 5px; background: transparent; color: var(--app-text); text-align: left; font: inherit; cursor: pointer; }
+.musicui-app label.header-menu-item { color: var(--app-text); font: inherit; }
+.header-menu-item:hover, .header-menu-item:focus-within { background: var(--app-tint); }
+.header-menu-item:disabled, .header-menu-item.disabled { opacity: .5; cursor: default; }
+.header-account-name { padding: 10px 12px; color: var(--app-muted); font-size: 12px; overflow-wrap: anywhere; border-bottom: 1px solid var(--app-border); margin-bottom: 4px; }
+.header-logout { border-top: 1px solid var(--app-border); margin-top: 4px; border-radius: 0 0 5px 5px; }
+.about-content { display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; padding-bottom: 24px; }
+.about-content img { width: 240px; max-width: 100%; height: auto; }
+
+@media (max-width: 767px) {
+    .header-actions { order: 4; flex-basis: 100%; }
+    .header-sync { flex: 1; }
+    .header-sync-detail, .header-sync-file { max-width: 100%; }
+    .header-dropdown[data-menu="account"] .header-dropdown-content { right: -52px; }
+}
 
 .musicui-app .btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; border-radius: 7px; padding: 8px 13px; min-height: 38px; font-size: 14px; font-weight: 400; line-height: 1.4; white-space: nowrap; }
 .musicui-app .btn-primary { background: var(--app-purple); border-color: var(--app-purple); color: white; }
