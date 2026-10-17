@@ -47,6 +47,10 @@ export function start(root) {
     document.addEventListener('pointerdown', event => {
         for (const menu of menus) if (!menu.contains(event.target)) close(root, menu.dataset.menu);
     }, options);
+    // Do not retain an open popover when its responsive trigger is hidden.
+    matchMedia('(max-width: 767px)').addEventListener('change', () => {
+        for (const menu of menus) close(root, menu.dataset.menu);
+    }, options);
 }
 export function dispose(root) {
     controllers.get(root)?.abort();
