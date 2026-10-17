@@ -26,8 +26,10 @@ async function request(path, options = {}, writing = false) {
     404: ['unavailable', 'The file is unavailable. It may have been deleted or access may have changed.'],
     429: ['quota', 'Google Drive is receiving too many requests. Wait and try again.'],
   };
-  const [code, message] = messages[status] || (writing && status >= 500
-    ? ['save-unknown', 'Save result unknown. Google Drive encountered a server error. Your local changes are retained; retry explicitly.']
+  const [code, message] = messages[status] || (writing && (status >= 500 || status === 408)
+    ? ['save-unknown', 'Save result unknown. Google Drive encountered a temporary error. Your local changes are retained.']
+    : status >= 500 || status === 408
+    ? ['transient', `Google Drive is temporarily unavailable (HTTP ${status}). Please try again.`]
     : ['drive', `Google Drive request failed (HTTP ${status}). Please try again.`]);
   throw failure(code, message, status);
 }
