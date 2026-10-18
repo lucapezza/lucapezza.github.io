@@ -83,19 +83,50 @@
 /* /Shared/OperationHost.razor.rz.scp.css */
 .application-wait[b-183udxkong] { position:fixed; inset:0; z-index:1100; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,.94); }
 /* /Shared/SongTable.razor.rz.scp.css */
-.pager-dropdown[b-ybm3qwf8eq] {
-    width: 100%;
+.song-pagination[b-ybm3qwf8eq] {
+    display: block;
 }
 
-@media (min-width: 576px) {
-    .pager-dropdown[b-ybm3qwf8eq] {
-        width: 75%;
+.song-pagination-summary[b-ybm3qwf8eq] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.song-pagination > .app-actions[b-ybm3qwf8eq] {
+    justify-content: center;
+    margin-top: 12px;
+}
+
+@media (max-width: 767px) {
+    .song-pagination > .app-actions[b-ybm3qwf8eq] {
+        justify-content: flex-end;
     }
+}
+
+.song-page-size[b-ybm3qwf8eq] {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-left: auto;
+    max-width: 100%;
+}
+
+.song-page-size label[b-ybm3qwf8eq] {
+    flex-shrink: 0;
+}
+
+.song-page-size[b-ybm3qwf8eq]  .rz-dropdown {
+    width: 160px;
+    max-width: calc(100% - 60px);
 }
 
 td[data-column="Date Added"][b-ybm3qwf8eq], td[data-column="Date Modified"][b-ybm3qwf8eq] {
     color: var(--app-muted);
-    font-size: 12px;
+    font-size: var(--app-font-meta);
     min-width: 105px;
 }
 /* /Shared/SyncRoute.razor.rz.scp.css */
@@ -109,6 +140,6 @@ td[data-column="Date Added"][b-ybm3qwf8eq], td[data-column="Date Modified"][b-yb
     font-size: 14px;
 }
 /* /Shared/WaitingNotice.razor.rz.scp.css */
-.waiting-notice[b-i1elh06754] { display:flex; align-items:center; justify-content:center; gap:.75rem; color:#573b76; white-space:normal; overflow-wrap:anywhere; }
+.waiting-notice[b-i1elh06754] { display:flex; align-items:center; justify-content:center; gap:.75rem; color:var(--app-text); font-size:var(--app-font-ui); white-space:normal; overflow-wrap:anywhere; }
 .waiting-protected[b-i1elh06754] { padding:1.5rem; min-height:7rem; }
 .waiting-compact[b-i1elh06754] { justify-content:flex-start; padding:.25rem 0; }
